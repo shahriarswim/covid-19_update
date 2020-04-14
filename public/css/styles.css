@@ -1,0 +1,97 @@
+body {
+  font-family: "Comic Neue", cursive;
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+h1 {
+  font-size: 2rem;
+}
+
+table {
+  width: 100%;
+  text-align: center;
+}
+
+table,
+th,
+td {
+  border: 2px solid black;
+  border-collapse: collapse;
+}
+th,
+td {
+  padding: 1%;
+}
+th {
+  background-color: #ff5252;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #8bc34a;
+  color: #212121;
+}
+tr:nth-child(odd) {
+  background-color: #dcedc8;
+  color: #212121;
+}
+
+a {
+  color: white;
+}
+a:hover {
+  color: #8bc34a;
+}
+
+#table {
+  overflow-x: auto;
+  margin: 2% 5%;
+  text-align: center;
+}
+
+/* top bar */
+#top-bar {
+  width: 100%;
+  background-color: #ff5252;
+  color: white;
+  margin: 0;
+  padding: 1% 0;
+  border: 1px solid black;
+  box-shadow: 0 4px 8px 0 #bdbdbd;
+  text-align: center;
+}
+
+/* Slogan */
+#slogan {
+  animation: blinker 2s ease-in infinite;
+  text-align: center;
+  color: #8bc34a;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Chart */
+#top-section {
+  margin: 2% 5%;
+}
+
+#chartDiv {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.item {
+  margin: 1% 5%;
+  text-align: center;
+}

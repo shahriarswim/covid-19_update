@@ -1,0 +1,65 @@
+<%- include("partials/header.ejs") %>
+
+<section id="top-section">
+  <h1 id="slogan">#StayHome #StaySafe</h1>
+  <div id="chartDiv">
+    <div class="item">
+      <h1>World</h1>
+      <p>New Cases: <%= data1.cases.new %></p>
+      <p style="color: red;">New Deaths: <%= data1.deaths.new %></p>
+      <p id="deathsAll" hidden><%= data1.deaths.total %></p>
+      <p id="recoveredAll" hidden><%= data1.cases.recovered %></p>
+      <p id="casesAll" hidden><%= data1.cases.total %></p>
+      <canvas id="chart" style="width: 300px; height: 300px;"></canvas>
+    </div>
+    <div class="item">
+      <h1>Bangladesh</h1>
+      <p>
+        New Cases: <%= data2.cases.new %> | Total Tests: <%= data2.tests.total
+        %>
+      </p>
+      <p style="color: red;">New Deaths: <%= data2.deaths.new %></p>
+      <p id="deathsBD" hidden><%= data2.deaths.total %></p>
+      <p id="recoveredBD" hidden><%= data2.cases.recovered %></p>
+      <p id="casesBD" hidden><%= data2.cases.total %></p>
+      <canvas id="myChart" style="width: 300px; height: 300px;"></canvas>
+    </div>
+  </div>
+</section>
+<div>
+  <div id="table">
+    <h1>Filtered By Total Cases</h1>
+    <p>(Updates every 15 min.)</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Country/Continent</th>
+          <th>New Cases</th>
+          <th>Total Cases</th>
+          <th>Recovered</th>
+          <th>Deaths</th>
+          <th>Total Deaths</th>
+          <th>Total Tests</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% data.forEach((data) => { %>
+        <tr>
+          <td><%= data.country %></td>
+          <td><%= data.cases.new %></td>
+          <td><%= data.cases.total %></td>
+          <td><%= data.cases.recovered %></td>
+          <td><%= data.deaths.new %></td>
+          <td><%= data.deaths.total %></td>
+          <td><%= data.tests.total %></td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Local Script -->
+<script src="scripts/script.js"></script>
+
+<%- include("partials/footer.ejs") %>
