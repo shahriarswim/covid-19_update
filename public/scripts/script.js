@@ -7,7 +7,6 @@ const recoveredAll = document.getElementById("recoveredAll").textContent;
 const casesBD = document.getElementById("casesBD").textContent;
 const deathsBD = document.getElementById("deathsBD").textContent;
 const recoveredBD = document.getElementById("recoveredBD").textContent;
-const slogan = document.getElementById("slogan");
 
 const myChart = new Chart(ctx, {
   type: "doughnut",
@@ -27,7 +26,11 @@ const myChart = new Chart(ctx, {
       },
     ],
   },
-  options: {},
+  options: {
+    animation: {
+      duration: 2000,
+    },
+  },
 });
 
 const ctx1 = document.getElementById("myChart").getContext("2d");
@@ -49,14 +52,9 @@ const myChart1 = new Chart(ctx1, {
       },
     ],
   },
-  options: {},
+  options: {
+    animation: {
+      duration: 2000,
+    },
+  },
 });
-
-// Slogan Animate
-// let sloganText = "#StayHome #StaySafe";
-
-// var str = sloganText.split("");
-// (function animate() {
-//   str.length > 0 ? (slogan.innerHTML += str.shift()) : clearTimeout(running);
-//   var running = setTimeout(animate, 90);
-// })();

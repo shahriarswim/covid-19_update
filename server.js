@@ -5,7 +5,6 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const request = require("request");
-const Chart = require("chart.js");
 
 const app = express();
 
